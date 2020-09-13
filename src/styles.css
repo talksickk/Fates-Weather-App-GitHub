@@ -150,3 +150,7 @@ button {
 .col.dotw.end {
   border-right: none;
 }
+
+#code-link {
+  text-align: center;
+}
