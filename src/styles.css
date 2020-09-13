@@ -1,0 +1,152 @@
+body {
+  font-family: "Work Sans", sans-serif;
+  border: 1px solid lightsteelblue;
+  border-radius: 20px;
+  margin: 10px auto;
+  max-width: 900px;
+  background: rgb(232, 232, 232);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(184, 242, 247, 1) 43%,
+    rgba(190, 251, 235, 1) 100%
+  );
+}
+
+a {
+  color: #00b7c2;
+}
+a:hover {
+  color: #0f4c75;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  padding: none;
+  color: #1b262c;
+}
+
+h2 {
+  font-size: 23px;
+  color: #0f4c75;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #00b7c2;
+  font-weight: bold;
+}
+
+h5 {
+  font-weight: 800;
+  color: #1b262c;
+}
+
+hr {
+  max-width: 95%;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 10px 30px;
+  padding: 0px 0px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+p {
+  padding: none;
+  font-weight: 800;
+  color: #1b262c;
+  margin-top: 40px;
+}
+
+button {
+  position: relative;
+  top: -57.5px;
+  left: 610px;
+}
+
+.city {
+  position: relative;
+  left: -6px;
+}
+
+.col-6 {
+  text-align: center;
+  align-self: center;
+}
+
+.main-pic {
+  font-size: 180px;
+  color: #f5ae6f;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.main-data {
+  font-family: "Work Sans", sans-serif;
+  text-align: left;
+  margin: 20px auto;
+}
+
+.form-control {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.col-12 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #1b262c;
+}
+
+.row {
+  padding: 0px 0px;
+}
+
+.col.dotw {
+  padding: 0px 0px;
+  text-align: center;
+  align-content: justify;
+  border-right: 1px solid #0f4c75;
+  margin: auto auto;
+}
+
+.forecast-icon {
+  font-size: 45px;
+  margin: 18px auto 40px auto;
+  color: #f5ae6f;
+}
+
+.forecast-precipitation {
+  color: #00b7c2;
+}
+
+.forecast-humidity {
+  color: darkslategrey;
+}
+#humidity {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+.forecast-wind {
+  color: gray;
+}
+#windspeed {
+  font-family: "Work Sans", sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+.col.dotw.end {
+  border-right: none;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fate's Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+
+    <form>
+      <div class="form-group search-bar">
+        <input
+          type="text"
+          id="city"
+          class="form-control"
+          placeholder="Enter city name"
+        />
+        <button type="button" class="btn btn-light" id="search">Search</button>
+        <button type="button" class="btn btn-success" id="locate">Current Location</button>
+        </form>
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+                <i class="fas fa-sun main-pic">
+                </i>
+            <ul>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation" id="precipitation"></i>
+                    1%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity">
+                        <span id="humidity"></span>
+                    </i>
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind">
+                        <span id="windspeed"></span>
+                    </i>
+                </li>
+            </ul>
+            </div>
+            <class class="col-6 main-data">
+              <p>
+                  <ul>
+                      <li>
+                <h1 class = "city" id="name">
+                    
+                </h1>
+                      </li>
+                      <li>
+                          <h2 class="date">
+                              Tuesday, August 25th, 2020
+                          </h2>
+                      </li>
+                      <li>
+                          <h2 class="time">
+                              2:46 PM
+                            </h2>
+                      </li>
+                      <li>
+                          <h3 id="condition"></h3>
+                      </li>
+
+
+
+
+                      <li>
+                          <h1>
+                              <span id="temperature"></span>
+                              
+                            <span id="celsius">
+                                <a href="">
+                                    °C
+                                </a>
+                             </span>
+                            |
+                            <span id="fahrenheit"> <a href="">
+                                °F
+                            </a>
+                                
+                            </span>       
+                            </h1>
+                      </li>
+
+
+
+                  </ul>
+                </p>
+            </class>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12 forecast-title"> 
+                5-Day Forecast
+            </div>
+            
+        </div>
+        <hr>
+        <div class="row forecast">
+              <div class="col dotw">
+            <p>
+            <ul>
+                <li>
+                    <h5>
+                        WED
+                    </h5>
+                </li>
+                <li>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                </li>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation"></i>
+                    20%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity"></i> 71%
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind"></i> 14 km/h
+                </li>
+            </ul>
+            </p>
+            <p>
+                21°C | 20°C
+            </p>
+        </div>
+        <div class="col dotw">
+            <p>
+            <ul>
+                <li>
+                    <h5>
+                        THUR
+                    </h5>
+                </li>
+                <li>
+                    <i class="fas fa-cloud-rain forecast-icon"></i>
+                </li>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation"></i>
+                    50%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity"></i> 73%
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind"></i> 26 km/h
+                </li>
+            </ul>
+            </p>
+            <p>
+                28°C | 18°C
+            </p>
+        </div>
+        <div class="col dotw">
+            <p>
+            <ul>
+                <li>
+                    <h5>
+                        FRI
+                    </h5>
+                </li>
+                <li>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                </li>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation"></i>
+                    20%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity"></i> 72%
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind"></i> 14 km/h
+                </li>
+            </ul>
+            </p>
+            <p>
+                24°C | 20°C
+            </p>
+        </div>
+        <div class="col dotw">
+            <p>
+            <ul>
+                <li>
+                    <h5>
+                        SAT
+                    </h5>
+                </li>
+                <li>
+                    <i class="fas fa-cloud-rain forecast-icon"></i>
+                </li>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation"></i>
+                    50%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity"></i> 79%
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind"></i> 24 km/h
+                </li>
+            </ul>
+            </p>
+            <p>
+                26°C | 19°C
+            </p>
+        </div>
+        <div class="col dotw end">
+            <p>
+            <ul>
+                <li>
+                    <h5>
+                        SUN
+                    </h5>
+                </li>
+                <li>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                </li>
+                <li>
+                    <i class="fas fa-umbrella forecast-precipitation"></i>
+                    10%
+                </li>
+                <li>
+                    <i class="fas fa-water forecast-humidity"></i> 62%
+                </li>
+                <li>
+                    <i class="fas fa-wind forecast-wind"></i> 21 km/h
+                </li>
+            </ul>
+            </p>
+            <p>
+                22°C | 14°C
+            </p>
+        </div>
+        </div>
+      </div>
+    
+
+    <script
+      src="https://kit.fontawesome.com/d7ee309f70.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
